@@ -16,8 +16,9 @@ body {
 #main-balloon {
   position: absolute;
   width: 10vh;
-  height: 10vh;
+  height: 11.5vh;
   background-color: rgb(151, 149, 149);
+  box-shadow: inset -7px -3px 10px rgba(20, 2, 2, 0.3);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -26,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 3.5vh;
   font-weight: bold;
   transition: opacity 1s ease; /* Add a transition for a smoother effect */
 }

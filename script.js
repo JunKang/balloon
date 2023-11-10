@@ -23,14 +23,21 @@ function getRandomStyles() {
 }
 
 function mainBalloonOnClick() {
-  const size = 10 + 0.3 * clickCount;
+  const balloonSizeWidth = 10 + 0.4 * clickCount;
+  const balloonSizeHeigh = 11.5 + 0.4 * clickCount;
+  const fontSize = 3.5 + 0.2 * clickCount;
+
   if (clickCount === 30) {
     mainBalloon.style.opacity = 0;
     createBalloons(30);
     mainBalloon.style.pointerEvents = "none";
   } else {
-    mainBalloon.style.width = mainBalloon.style.height = size + "vh";
+    mainBalloon.style.width = balloonSizeWidth + "vh";
+    mainBalloon.style.height = balloonSizeHeigh + "vh";
     clickCount += 1;
+
+    // Increase the font size
+    mainBalloon.style.fontSize = fontSize + "vh";
     // Decrement the opacity
     var currentOpacity = parseFloat(
       window.getComputedStyle(mainBalloon).opacity
