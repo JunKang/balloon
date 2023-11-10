@@ -1,5 +1,6 @@
 const balloonContainer = document.getElementById("balloon-container");
 const mainBalloon = document.getElementById("main-balloon");
+const title = document.getElementById("title");
 var clickCount = 1;
 
 function random(num) {
@@ -28,13 +29,18 @@ function mainBalloonOnClick() {
   const fontSize = 3.5 + 0.2 * clickCount;
 
   if (clickCount === 30) {
+    mainBalloon.textContent = "?";
     mainBalloon.style.opacity = 0;
+    title.style.opacity = 0;
     createBalloons(30);
     mainBalloon.style.pointerEvents = "none";
   } else {
     mainBalloon.style.width = balloonSizeWidth + "vh";
     mainBalloon.style.height = balloonSizeHeigh + "vh";
     clickCount += 1;
+
+    var texts = ["남", "여"];
+    mainBalloon.textContent = texts[clickCount % 2];
 
     // Increase the font size
     mainBalloon.style.fontSize = fontSize + "vh";

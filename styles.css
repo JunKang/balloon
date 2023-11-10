@@ -3,6 +3,17 @@ body {
   background-color: beige;
 }
 
+#title {
+  width: 100vw;
+  padding-top: 10vh;
+  font-size: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: opacity 1s ease; /* Add a transition for a smoother effect */
+}
+
 #balloon-container {
   height: 100vh;
   padding: 1em;
@@ -17,6 +28,7 @@ body {
   position: absolute;
   width: 10vh;
   height: 11.5vh;
+  color: rgb(49, 49, 49);
   background-color: rgb(151, 149, 149);
   box-shadow: inset -7px -3px 10px rgba(20, 2, 2, 0.3);
   border-radius: 50%;
