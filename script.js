@@ -1,6 +1,7 @@
 const balloonContainer = document.getElementById("balloon-container");
 const mainBalloon = document.getElementById("main-balloon");
 const title = document.querySelector(".title");
+const img = document.getElementById("boy-image");
 
 var clickCount = 1;
 
@@ -36,6 +37,7 @@ function mainBalloonOnClick() {
     title.style.display = "none";
     createBalloons(30);
     mainBalloon.style.pointerEvents = "none";
+    img.style.display = "flex";
   } else {
     mainBalloon.style.width = balloonSizeWidth + "vh";
     mainBalloon.style.height = balloonSizeHeigh + "vh";
@@ -76,7 +78,3 @@ mainBalloon.addEventListener("click", () => {
   console.log("done");
   mainBalloonOnClick();
 });
-
-// window.addEventListener("click", () => {
-//   removeBalloons();
-// });
