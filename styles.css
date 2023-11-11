@@ -1,24 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100&family=Open+Sans:wght@600&display=swap");
+@import "reset.css";
+
 body {
-  margin: 0;
   background-color: beige;
+  font-family: "Open Sans", sans-serif;
 }
 
-#title {
-  width: 100vw;
-  padding-top: 10vh;
-  font-size: 5vh;
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  transition: opacity 1s ease; /* Add a transition for a smoother effect */
+  padding-top: 10vh;
 }
 
 #balloon-container {
-  height: 100vh;
-  padding: 1em;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
   box-sizing: border-box;
   display: flex;
+  position: fixed;
+  top: 0;
   flex-wrap: wrap;
   overflow: hidden;
   transition: opacity 500ms;
@@ -29,7 +31,7 @@ body {
   width: 10vh;
   height: 11.5vh;
   color: rgb(49, 49, 49);
-  background-color: rgb(151, 149, 149);
+  background-color: rgb(178, 175, 175);
   box-shadow: inset -7px -3px 10px rgba(20, 2, 2, 0.3);
   border-radius: 50%;
   top: 50%;
@@ -42,6 +44,7 @@ body {
   font-size: 3.5vh;
   font-weight: bold;
   transition: opacity 1s ease; /* Add a transition for a smoother effect */
+  z-index: 99;
 }
 
 .balloon {
@@ -83,7 +86,35 @@ body {
     opacity: 1;
   }
   to {
-    transform: translateY(-300vh);
+    transform: translateY(-100vh);
     opacity: 0.5;
+  }
+}
+
+.animate-charcter {
+  background-image: linear-gradient(
+    -225deg,
+    #2148e4 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #ff36f1 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 12vw;
+  font-weight: bold;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
   }
 }
