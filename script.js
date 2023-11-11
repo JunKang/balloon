@@ -27,10 +27,11 @@ function getRandomStyles() {
 function mainBalloonOnClick() {
   const balloonSizeWidth = 10 + 0.4 * clickCount;
   const balloonSizeHeigh = 11.5 + 0.4 * clickCount;
-  const fontSize = 3.5 + 0.2 * clickCount;
+  const fontSize = 3 + 0.2 * clickCount;
 
   if (clickCount === 30) {
-    mainBalloon.textContent = "?";
+    mainBalloon.style.color = "rgb(45, 45, 45)";
+    mainBalloon.textContent = "과연?";
     mainBalloon.style.opacity = 0;
     title.style.display = "none";
     createBalloons(30);
@@ -42,6 +43,8 @@ function mainBalloonOnClick() {
 
     var texts = ["아들?", "딸?"];
     mainBalloon.textContent = texts[clickCount % 2];
+    if (clickCount % 2 === 0) mainBalloon.style.color = "rgb(51, 93, 245)";
+    else mainBalloon.style.color = "rgb(255, 91, 91)";
 
     // Increase the font size
     mainBalloon.style.fontSize = fontSize + "vh";
